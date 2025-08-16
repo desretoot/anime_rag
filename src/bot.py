@@ -88,7 +88,7 @@ def format_anime_response(anime_data, similarity=None):
     response += f"🔗 <a href='{url}'>Подробнее на Shikimori</a>"
     
     if similarity:
-        response += f"\n🎯 Релевантность: {similarity:.2f}"
+        response += f"\n🎯 Схожесть: {similarity:.0f}%"
     
     return response
 
