@@ -86,12 +86,16 @@ class AnimeRAGEngine:
         
         # Формируем результаты
         results = []
+        # Находим максимальное расстояние для нормализации
+        max_distance = np.max(distances[0])
         for i, idx in enumerate(indices[0]):
             if idx < len(self.anime_data):
                 anime = self.anime_data[idx]
+                # Нормализуем расстояние в проценты (0-100%)
+                similarity_percent = (1 - distances[0][i] / max_distance) * 100
                 results.append({
                     'anime': anime,
-                    'similarity': float(1 / (1 + distances[0][i]))  # Преобразуем расстояние в схожесть
+                    'similarity': float(similarity_percent)
                 })
         
         return results
