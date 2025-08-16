@@ -1,6 +1,6 @@
 # Anime RAG Bot (GigaChat Edition)
 
-Telegram-бот с системой рекомендаций аниме на основе RAG (Retrieval-Augmented Generation) и GigaChat API.
+Telegram-бот с системой рекомендаций аниме на основе RAG (Retrieval-Augmented Generation).
 
 ## 🚀 Возможности
 
